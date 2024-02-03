@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator App</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
+    
+</head>
+<body>  
+    <div class="main">
+        <h1 id="headline-1">Generate a</h1>
+        <h1 id="headline-2">random password</h1>
+        <h2 id="subline">Never use an insecure password again.</h2>
+        <div class="container">
+            <div class="inputQueries">
+                <h2 class="pass">Select Desired Password Length</h2>
+                <h2 class="char">Select Desired Number of Characters</h2>
+                <h2 class="sym">Select Desired Number of Symbols</h2>
+                <h2 class="num">Select Desired Number of Numerics</h2>
+            </div>
+
+            <div class="inputElements">
+                <input   id="passInput"    type="range" min="0" max="15" value="0" onchange="change1()">
+                <input   id="charInput"    type="range" min="0" max="15" value="0" onchange="change2()">
+                <input   id="symbolInput"  type="range" min="0" max="15" value="0" onchange="change3()">
+                <input   id="numericInput" type="range" min="0" max="15" value="0" onchange="change4()">
+            </div>    
+
+            <div class="inputDisplay">
+                <h2  class="pass"  id="passOutput">0</h2>
+                <h2  class="char"  id="charOutput">0</h2>
+                <h2  class="sym"   id="symbolOutput">0</h2>
+                <h2  class="num"   id="numericOutput">0</h2>
+            </div>
+
+            <div class="confirmBtn">
+                <button class="btn"  id="passBtn">Confirm</button>
+                <button class="btn"  id="charBtn">Confirm</button>
+                <button class="btn"  id="symbolBtn">Confirm</button>
+                <button class="btn"  id="numericBtn">Confirm</button>
+            </div>
+            
+            <div class="message">
+                <h3  class="pass" id="passMsg"></h3>
+                <h3  class="char" id="charMsg"></h3>
+                <h3  class="sym"  id="symbolMsg"></h3>
+                <h3  class="num"  id="numericMsg"></h3>
+            </div>
+        </div>
+
+        <h2 id="remainingDisplay">" "</h2>
+        
+
+
+        <div class="appBtns">
+            <button class="aBtn" id="generatePass">Generate Passwords</button>
+            <button class="aBtn" id="resetBtn">Reset</button>
+        </div>   
+
+    </div>  
+      
+        <div class="passwordDisplay">
+            <h3 class ="copy" id="pass1"></h3>
+            <h3 class ="copy" id="pass2"></h3>
+        </div>
+    
+    <script src="index.js"></script>
+    <script src="./cClipboard.js"></script>
+</body>
+</html>
